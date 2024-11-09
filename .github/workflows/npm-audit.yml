@@ -20,6 +20,10 @@ jobs:
       
       - run: npm install ./splunk-elb-classic-access-logs-processor
       - run: npm audit --json | tee npm_audit_report.json
+      - run: npm explain tough-cookie
+      - run: npm ls tough-cookie
+      - run: npm ll tough-cookie
+      - run: npm la tough-cookie
 
       - uses: actions/upload-artifact@v4
         with:
