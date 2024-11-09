@@ -9,19 +9,19 @@ on:
 jobs:
 
 
-  oast_npm_audit:
+  npm_audit:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.2.2
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4.1.0
         with:
           node-version: '18'
       
       - run: npm install
       - run: npm audit --json | tee npm_audit_report.json
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: nmp_audit
           path: npm_audit_report.json
