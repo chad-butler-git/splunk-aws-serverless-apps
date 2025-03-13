@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v4.1.0
         with:
-          node-version: '18'
+          node-version: '22'
       
       - run: npm install ./splunk-elb-classic-access-logs-processor
       - run: npm audit --json | tee npm_audit_report.json
